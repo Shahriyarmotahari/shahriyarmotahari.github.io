@@ -455,6 +455,18 @@
   .courses .note { grid-column: 1; font-size: 0.9063rem; color: var(--muted); }
   .courses .term { grid-column: 2; grid-row: 1; font-family: var(--font-mono); font-size: var(--step--1); color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
 
+  .certs {
+    list-style: none; display: grid; background: var(--card-bg); border: 1px solid var(--line);
+    border-radius: var(--radius-card); box-shadow: var(--shadow-card); overflow: hidden;
+  }
+  .certs li {
+    display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 20px;
+    padding: 15px 18px; border-bottom: 1px solid var(--line-soft); align-items: baseline;
+  }
+  .certs li:last-child { border-bottom: 0; }
+  .cert-name { color: var(--ink); font-weight: 500; }
+  .cert-org { grid-column: 1; color: var(--muted); font-size: 0.9063rem; }
+  .certs .when { grid-column: 2; grid-row: 1; font-family: var(--font-mono); font-size: var(--step--1); color: var(--muted); white-space: nowrap; }
   /* Awards & skills */
   .awards-row { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: clamp(20px, 4vw, 40px); align-items: start; }
   .awards-row .shot { max-width: 240px; }
@@ -501,8 +513,8 @@
   @media (max-width: 520px) {
     .news li, .pub { grid-template-columns: minmax(0, 1fr); gap: 4px; }
     .news time, .pub time { padding-top: 0; }
-    .courses li { grid-template-columns: minmax(0, 1fr); }
-    .courses .term { grid-column: 1; grid-row: auto; }
+    .courses li, .certs li { grid-template-columns: minmax(0, 1fr); }
+    .courses .term, .certs .when { grid-column: 1; grid-row: auto; }
   }
 </style>
 <meta name="author" content="Shahriyar Motahari">
@@ -531,6 +543,7 @@
       <a href="#experience">Experience</a>
       <a href="#talks">Talks</a>
       <a href="#teaching">Teaching</a>
+      <a href="#certificates">Certificates</a>
       <a href="#contact">Contact</a>
     </nav>
     <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false">
@@ -1057,6 +1070,44 @@
             <li><span class="course">Water and Wastewater Engineering Laboratory</span><span class="note">COD, BOD, turbidity, suspended solids, pH and alkalinity measurements</span><span class="term">2021 · 2022</span></li>
           </ul>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="certificates" aria-labelledby="certificates-title">
+    <div class="wrap section-grid">
+      <div class="section-head">
+        <h2 id="certificates-title">Certificates</h2>
+        <p>Research ethics, field safety and entrepreneurship training.</p>
+      </div>
+      <div class="stack">
+        <ul class="certs">
+          <li>
+            <span class="cert-name">Small Non-Pleasure Domestic Vessel Basic Safety (SDV-BS)</span>
+            <span class="cert-org">Transport Canada, Marine Safety and Security · Safer Ocean Systems</span>
+            <span class="when">Sep 2026</span>
+          </li>
+          <li>
+            <span class="cert-name">Lab2Market Validate — Foundations Program</span>
+            <span class="cert-org">entrepreneurship@UBC · Lab2Market Pacific Hub</span>
+            <span class="when">Fall 2026</span>
+          </li>
+          <li>
+            <span class="cert-name">Fatigue Management at Sea</span>
+            <span class="cert-org">Canadian Centre for Occupational Health and Safety (CCOHS)</span>
+            <span class="when">Aug 2026</span>
+          </li>
+          <li>
+            <span class="cert-name">TCPS 2: CORE 2022 — Ethical Conduct for Research Involving Humans</span>
+            <span class="cert-org">Panel on Research Ethics, Government of Canada</span>
+            <span class="when">Aug 2026</span>
+          </li>
+          <li>
+            <span class="cert-name">Responsible Conduct of Research (RCR) — Stage 1</span>
+            <span class="cert-org">CITI Program · University of British Columbia</span>
+            <span class="when">Mar 2025</span>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
