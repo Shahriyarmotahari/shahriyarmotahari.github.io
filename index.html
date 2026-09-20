@@ -1,0 +1,1406 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shahriyar Motahari</title>
+<meta name="description" content="Shahriyar Motahari is a PhD candidate in Chemical Engineering at the University of British Columbia developing electrochemical systems that destroy PFAS in water.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap">
+<style>
+  :root {
+    --bg: #f3f6f5;
+    --surface: #ffffff;
+    --surface-2: #e9efee;
+    --ink: #13232a;
+    --ink-2: #2c3e45;
+    --muted: #56676e;
+    --line: rgba(19, 35, 42, 0.12);
+    --line-soft: rgba(19, 35, 42, 0.07);
+    --shadow-card: 0 1px 2px rgba(19, 35, 42, 0.04), 0 14px 30px -22px rgba(19, 35, 42, 0.30);
+    --shadow-card-hover: 0 1px 2px rgba(19, 35, 42, 0.05), 0 18px 36px -22px rgba(19, 35, 42, 0.38);
+    --card-bg: #ffffff;
+    --card-bg-hover: #ffffff;
+    --grid: rgba(14, 106, 110, 0.07);
+    --accent: #0e6a6e;
+    --accent-strong: #0a5357;
+    --accent-soft: #dcecea;
+    --on-accent: #ffffff;
+    --fluor: #3d7a3a;
+    --oxy: #b0453b;
+    --stage: rgba(14, 106, 110, 0.07);
+    --mol-c: #46585f;
+    --mol-f: #4f9247;
+    --mol-o: #c0544a;
+    --mol-h: #cfd8d6;
+    --ring: rgba(14, 106, 110, 0.14);
+
+    --font-display: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    --font-body: "IBM Plex Sans", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+    --step--1: 0.8125rem;
+    --step-0: 1rem;
+    --step-1: 1.1875rem;
+    --step-2: 1.5rem;
+    --step-3: clamp(1.75rem, 1.3rem + 1.6vw, 2.25rem);
+    --step-4: clamp(2.5rem, 1.6rem + 3.8vw, 4.25rem);
+
+    --radius: 6px;
+    --radius-card: 14px;
+    --radius-in: 8px;
+    --card-pad: clamp(20px, 2.6vw, 28px);
+    --gutter: clamp(16px, 4vw, 40px);
+    --max: 1120px;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0c1619;
+      --surface: #122025;
+      --surface-2: #17292f;
+      --ink: #e3ecea;
+      --ink-2: #c3d1cf;
+      --muted: #93a7a9;
+      --line: rgba(227, 236, 234, 0.14);
+      --line-soft: rgba(227, 236, 234, 0.08);
+      --shadow-card: none;
+      --shadow-card-hover: none;
+      --card-bg: #122025;
+      --card-bg-hover: #17292f;
+      --grid: rgba(92, 195, 190, 0.07);
+      --accent: #5cc3be;
+      --accent-strong: #86d6d1;
+      --accent-soft: #163434;
+      --on-accent: #06201f;
+      --fluor: #8fcb84;
+      --oxy: #e8867a;
+      --stage: rgba(92, 195, 190, 0.09);
+      --stage: rgba(92, 195, 190, 0.09);
+    --mol-c: #9fb3b6;
+      --mol-f: #7cc271;
+      --mol-o: #e8867a;
+      --mol-h: #e8efee;
+      --ring: rgba(92, 195, 190, 0.16);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0c1619;
+    --surface: #122025;
+    --surface-2: #17292f;
+    --ink: #e3ecea;
+    --ink-2: #c3d1cf;
+    --muted: #93a7a9;
+    --line: rgba(227, 236, 234, 0.14);
+    --line-soft: rgba(227, 236, 234, 0.08);
+    --shadow-card: none;
+    --shadow-card-hover: none;
+    --card-bg: #122025;
+    --card-bg-hover: #17292f;
+    --grid: rgba(92, 195, 190, 0.07);
+    --accent: #5cc3be;
+    --accent-strong: #86d6d1;
+    --accent-soft: #163434;
+    --on-accent: #06201f;
+    --fluor: #8fcb84;
+    --oxy: #e8867a;
+    --stage: rgba(92, 195, 190, 0.09);
+    --mol-c: #9fb3b6;
+    --mol-f: #7cc271;
+    --mol-o: #e8867a;
+    --mol-h: #e8efee;
+    --ring: rgba(92, 195, 190, 0.16);
+    color-scheme: dark;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: var(--step-0);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--accent-strong); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.15; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+  p { margin: 0; }
+  ul, ol { margin: 0; padding: 0; }
+  .wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--gutter); }
+  .mono { font-family: var(--font-mono); }
+  .label {
+    font-family: var(--font-mono);
+    font-size: var(--step--1);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .skip {
+    position: absolute; left: 12px; top: -48px; z-index: 50;
+    background: var(--accent); color: var(--on-accent); padding: 8px 14px; border-radius: var(--radius);
+  }
+  .skip:focus { top: 12px; }
+
+  /* ---------- Top bar ---------- */
+  .topbar {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 20;
+    background: color-mix(in srgb, var(--bg) 86%, transparent);
+    backdrop-filter: saturate(140%) blur(10px);
+    -webkit-backdrop-filter: saturate(140%) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .topbar-inner { display: flex; align-items: center; gap: 24px; min-height: 60px; }
+  .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; flex-shrink: 0; }
+  .brand-mark {
+    display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%;
+    background: var(--accent); color: var(--on-accent);
+    font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; letter-spacing: 0.02em;
+  }
+  .brand-name { font-family: var(--font-display); font-size: 1.125rem; font-weight: 500; }
+  .nav { margin-left: auto; display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a {
+    color: var(--muted); text-decoration: none; font-size: 0.9375rem; white-space: nowrap;
+    padding: 6px 10px; border-radius: 999px; transition: color .2s, background-color .2s;
+  }
+  .nav a:hover { color: var(--ink); background: var(--surface-2); }
+  .nav a[aria-current="true"] { color: var(--accent); background: var(--accent-soft); }
+  .theme-toggle {
+    flex-shrink: 0; display: grid; place-items: center; width: 38px; height: 38px;
+    border: 1px solid var(--line); background: var(--surface); color: var(--ink-2);
+    border-radius: 50%; cursor: pointer; transition: border-color .2s, color .2s;
+  }
+  .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+  .theme-toggle svg { width: 18px; height: 18px; }
+  .theme-toggle .icon-sun { display: none; }
+  .theme-toggle[aria-pressed="true"] .icon-sun { display: block; }
+  .theme-toggle[aria-pressed="true"] .icon-moon { display: none; }
+
+  /* ---------- Hero ---------- */
+  .hero { padding-block: clamp(48px, 8vw, 96px) clamp(32px, 5vw, 56px); }
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: clamp(28px, 5vw, 72px); align-items: center; }
+  .hero .eyebrow { margin-bottom: 18px; }
+  .hero h1 { font-size: var(--step-4); font-weight: 500; letter-spacing: -0.025em; }
+  .lede {
+    margin-top: 22px; max-width: 58ch;
+    font-size: clamp(1.125rem, 1rem + 0.5vw, 1.3125rem); line-height: 1.6; color: var(--ink-2);
+  }
+  .lede em { font-family: var(--font-display); font-style: italic; font-size: 1.08em; color: var(--ink); }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 9px; padding: 10px 18px; border-radius: 999px;
+    font-size: 0.9375rem; font-weight: 500; text-decoration: none; border: 1px solid transparent;
+    transition: background-color .2s, border-color .2s, color .2s;
+  }
+  .btn svg { width: 17px; height: 17px; flex-shrink: 0; }
+  .btn-primary { background: var(--accent); color: var(--on-accent); }
+  .btn-primary:hover { background: var(--accent-strong); color: var(--on-accent); }
+  .btn-ghost { border-color: var(--line); color: var(--ink); background: var(--surface); }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+  .hero-facts { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 28px; color: var(--muted); font-size: 0.9375rem; }
+  .hero-facts li { display: inline-flex; align-items: center; gap: 8px; }
+  .hero-facts svg { width: 16px; height: 16px; color: var(--accent); }
+
+  .portrait {
+    position: relative; width: clamp(180px, 22vw, 260px); aspect-ratio: 4 / 5; max-width: 100%;
+    border-radius: 999px 999px var(--radius-in) var(--radius-in); overflow: hidden;
+    background:
+      repeating-radial-gradient(circle at 50% 50%, transparent 0 17px, var(--ring) 17px 18px),
+      var(--accent-soft);
+    border: 1px solid var(--line);
+    display: grid; place-items: center;
+  }
+  .portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 18%; }
+  .portrait .initials {
+    font-family: var(--font-display); font-size: clamp(3rem, 5vw, 4.25rem); font-weight: 500;
+    color: var(--accent); letter-spacing: 0.02em; background: var(--accent-soft);
+    width: 58%; aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center; line-height: 1;
+    border: 1px solid var(--ring);
+  }
+
+  /* ---------- Specimen (molecule) panel ---------- */
+  .specimen {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(20px, 5vw, 56px); align-items: center;
+    padding-block: clamp(28px, 4vw, 44px);
+  }
+  .specimen-figure {
+    margin: 0; position: relative; display: grid; align-content: center;
+    background: radial-gradient(ellipse 70% 62% at 50% 46%, var(--stage), transparent 72%);
+  }
+  .specimen-caption { display: grid; align-content: center; gap: 12px; }
+  .specimen-caption h2 { font-size: var(--step-2); }
+  .specimen-caption p { color: var(--ink-2); font-size: 0.9688rem; }
+  .specimen-caption .formula { font-family: var(--font-mono); font-size: var(--step--1); color: var(--muted); }
+
+  /* ---------- Photo galleries ---------- */
+  .gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .shot { margin: 0; display: grid; gap: 9px; }
+  .shot-btn {
+    padding: 0; border: 1px solid var(--line); background: var(--surface-2);
+    border-radius: var(--radius-in); overflow: hidden; cursor: zoom-in; display: block; width: 100%;
+  }
+  .shot-btn img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .4s ease; }
+  .shot-btn:hover img { transform: scale(1.04); }
+  .shot--portrait .shot-btn img { aspect-ratio: 3 / 4; }
+  .shot figcaption { font-size: 0.875rem; line-height: 1.5; color: var(--muted); }
+  .shot figcaption b { color: var(--ink-2); font-weight: 600; }
+  @media (prefers-reduced-motion: reduce) { .shot-btn img { transition: none; } .shot-btn:hover img { transform: none; } }
+
+  .lightbox {
+    border: 0; padding: 0; background: transparent; max-width: min(1100px, 94vw); max-height: 92vh;
+    color: var(--ink); overflow: visible;
+  }
+  .lightbox::backdrop { background: rgba(6, 18, 21, 0.82); backdrop-filter: blur(3px); }
+  .lightbox-inner { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-card); overflow: hidden; }
+  .lightbox img { width: 100%; height: auto; max-height: 78vh; object-fit: contain; background: var(--surface-2); }
+  .lightbox-cap { padding: 14px 18px; font-size: 0.9375rem; color: var(--ink-2); }
+  .lightbox-close {
+    position: absolute; top: -14px; right: -14px; width: 38px; height: 38px; border-radius: 50%;
+    border: 1px solid var(--line); background: var(--surface); color: var(--ink); font-size: 1.25rem;
+    line-height: 1; cursor: pointer; display: grid; place-items: center;
+  }
+  .lightbox-close:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ---------- 3D molecule ---------- */
+  .mol3d { position: relative; width: 100%; height: clamp(190px, 23vw, 250px); }
+  .mol3d canvas { width: 100%; height: 100%; display: block; touch-action: none; cursor: grab; }
+  .mol3d canvas:active { cursor: grabbing; }
+  .mol-static { position: absolute; inset: 0; display: grid; align-content: center; pointer-events: none; }
+  .mol3d.is-live .mol-static { display: none; }
+  .mol-controls { position: absolute; top: 0; right: 0; display: flex; gap: 14px; opacity: 0; transition: opacity .25s ease; }
+  .mol3d.is-live:hover .mol-controls,
+  .mol3d.is-live:focus-within .mol-controls { opacity: 1; }
+  @media (hover: none) { .mol3d.is-live .mol-controls { opacity: 1; } }
+  .mol-btn {
+    font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: .06em; text-transform: uppercase;
+    padding: 0; border: 0; background: none; color: var(--muted); cursor: pointer;
+  }
+  .mol-btn:hover { color: var(--accent); }
+  .mol-meta {
+    position: absolute; left: 0; right: 0; bottom: -6px; display: flex; flex-wrap: wrap;
+    align-items: center; justify-content: space-between; gap: 6px 16px;
+    font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: .04em; color: var(--muted);
+    opacity: 0; transition: opacity .25s ease;
+  }
+  .mol3d.is-live .mol-meta { opacity: 1; }
+  .mol-legend { list-style: none; display: flex; gap: 11px; }
+  .mol-legend li { display: inline-flex; align-items: center; gap: 4px; }
+  .mol-legend .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+  .dot-c { background: var(--mol-c); }
+  .dot-f { background: var(--mol-f); }
+  .dot-o { background: var(--mol-o); }
+  .dot-h { background: var(--mol-h); }
+  @media (max-width: 560px) { .mol-hint { display: none; } }
+
+  /* ---------- Sections ---------- */
+  .section { padding-block: clamp(48px, 7vw, 88px); border-top: 1px solid var(--line); scroll-margin-top: 64px; }
+  .section-grid { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: clamp(24px, 5vw, 64px); }
+  .section-head { align-self: start; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 84px); }
+  .section-head h2 { font-size: var(--step-3); }
+  .section-head p { margin-top: 10px; color: var(--muted); font-size: 0.9375rem; }
+  .stack { display: grid; gap: 40px; }
+  .sub-head { font-family: var(--font-mono); font-size: var(--step--1); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; font-weight: 400; }
+
+  /* About */
+  .prose { display: grid; gap: 16px; max-width: 66ch; color: var(--ink-2); font-size: 1.0313rem; }
+  .prose strong { color: var(--ink); font-weight: 600; }
+  .chips { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+  .chips li {
+    font-size: 0.875rem; padding: 4px 12px; border-radius: 999px;
+    background: var(--surface-2); color: var(--ink-2); border: 1px solid var(--line);
+  }
+
+  /* News */
+  .news { list-style: none; display: grid; }
+  .news li { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 20px; padding-block: 14px; border-bottom: 1px dashed var(--line); }
+  .news li:first-child { padding-top: 0; }
+  .news li:last-child { border-bottom: 0; }
+  .news time { font-family: var(--font-mono); font-size: var(--step--1); color: var(--accent); padding-top: 3px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .news p { color: var(--ink-2); }
+  .news cite { font-style: italic; font-family: var(--font-display); font-size: 1.06em; color: var(--ink); }
+
+  /* Research */
+  .project {
+    border: 1px solid var(--line); border-radius: var(--radius-card); background: var(--card-bg);
+    box-shadow: var(--shadow-card); padding: var(--card-pad); display: grid; gap: 18px;
+    transition: border-color .22s ease, box-shadow .22s ease, background-color .22s ease;
+  }
+  .project.is-collapsible:hover,
+  .project.is-collapsible:focus-within {
+    border-color: color-mix(in srgb, var(--accent) 34%, var(--line));
+    box-shadow: var(--shadow-card-hover);
+    background: var(--card-bg-hover);
+  }
+  .project-meta { display: flex; flex-wrap: wrap; gap: 6px 16px; }
+  .project h3 { font-size: var(--step-2); }
+  .project > p { color: var(--ink-2); max-width: 66ch; }
+  .metrics {
+    display: flex; flex-wrap: wrap; row-gap: 14px;
+    border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft);
+    padding-block: 15px;
+  }
+  .metric { flex: 1 1 145px; padding-inline: 20px; border-left: 1px solid var(--line-soft); display: grid; gap: 3px; align-content: start; }
+  .metric:first-child { padding-left: 0; border-left: 0; }
+  .metric .num { font-family: var(--font-mono); font-size: 1.5rem; font-weight: 500; color: var(--accent); line-height: 1.2; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+  .metric .what { font-size: 0.875rem; color: var(--ink-2); line-height: 1.4; }
+  .ticks { list-style: none; display: grid; gap: 8px; }
+  .ticks li { position: relative; padding-left: 22px; color: var(--ink-2); }
+  .ticks li::before { content: ""; position: absolute; left: 2px; top: 0.78em; width: 10px; height: 2px; background: var(--accent); }
+
+  .project-title { margin: 0; }
+  .project-toggle {
+    width: 100%; display: flex; align-items: baseline; justify-content: space-between; gap: 18px;
+    padding: 0; border: 0; background: none; text-align: left; cursor: pointer;
+    font-family: var(--font-display); font-size: var(--step-2); font-weight: 500; line-height: 1.15;
+    letter-spacing: -0.01em; color: var(--ink); transition: color .2s;
+  }
+  .project:not(.is-collapsible) .project-toggle { cursor: default; }
+  .project-toggle:hover { color: var(--accent); }
+  .project-more {
+    display: none; align-items: center; gap: 7px; flex-shrink: 0;
+    font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--muted); white-space: nowrap;
+  }
+  .project.is-collapsible .project-more { display: inline-flex; }
+  .project-toggle:hover .project-more { color: var(--accent); }
+  .project-sign { position: relative; width: 11px; height: 11px; }
+  .project-sign::before, .project-sign::after {
+    content: ""; position: absolute; inset: 0; margin: auto; background: currentColor;
+    transition: transform .3s ease, opacity .3s ease;
+  }
+  .project-sign::before { width: 11px; height: 1.5px; }
+  .project-sign::after { width: 1.5px; height: 11px; }
+  .project.is-open .project-sign::after { transform: rotate(90deg); opacity: 0; }
+  .project-short { color: var(--ink-2); max-width: 66ch; }
+  .project-body { display: grid; grid-template-rows: 1fr; }
+  .project.is-collapsible .project-body { grid-template-rows: 0fr; transition: grid-template-rows .35s ease; }
+  .project.is-open .project-body { grid-template-rows: 1fr; }
+  .project-body-inner { overflow: hidden; display: grid; gap: 16px; }
+  .project.is-collapsible .project-body-inner > *:first-child { margin-top: 2px; }
+  .project-body-inner > p { color: var(--ink-2); max-width: 66ch; }
+  .project-figure { margin: 0; display: grid; gap: 9px; }
+  .project-shot { background: #ffffff; border-radius: calc(var(--radius-card) - 8px); }
+  .project-shot img { width: 100%; height: auto; aspect-ratio: auto; }
+  .project-figure figcaption { font-size: 0.875rem; line-height: 1.5; color: var(--muted); max-width: 70ch; }
+  @media (prefers-reduced-motion: reduce) {
+    .project.is-collapsible .project-body { transition: none; }
+    .project-sign::before, .project-sign::after { transition: none; }
+  }
+  @media (max-width: 560px) {
+    .project-more-label { display: none; }
+    .metrics { display: grid; grid-template-columns: minmax(0, 1fr); padding-block: 0; border-bottom: 0; }
+    .metric { padding: 12px 0; border-left: 0; border-bottom: 1px solid var(--line-soft); }
+    .metric:first-child { padding-top: 12px; }
+    .metric:last-child { border-bottom: 0; }
+  }
+
+  /* Experience timeline */
+  .timeline { list-style: none; display: grid; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 5px; top: 8px; bottom: 8px; width: 1px; background: var(--line); }
+  .role { position: relative; padding-left: 34px; padding-bottom: 34px; display: grid; gap: 6px; }
+  .role:last-child { padding-bottom: 0; }
+  .role::before {
+    content: ""; position: absolute; left: 0; top: 7px; width: 11px; height: 11px; border-radius: 50%;
+    background: var(--bg); border: 2px solid var(--accent);
+  }
+  .role.current::before { background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+  .role-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 16px; align-items: baseline; }
+  .role h3 { font-family: var(--font-body); font-size: 1.0625rem; font-weight: 600; letter-spacing: 0; }
+  .role .org { color: var(--muted); }
+  .role .when { font-family: var(--font-mono); font-size: var(--step--1); color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .role .ticks { margin-top: 6px; font-size: 0.9688rem; }
+  .service {
+    list-style: none; display: grid; background: var(--card-bg); border: 1px solid var(--line);
+    border-radius: var(--radius-card); box-shadow: var(--shadow-card); overflow: hidden;
+  }
+  .service li {
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 16px;
+    padding: 13px 18px; border-bottom: 1px solid var(--line-soft);
+  }
+  .service li:last-child { border-bottom: 0; }
+  .service .when { font-family: var(--font-mono); font-size: var(--step--1); color: var(--muted); white-space: nowrap; }
+  .service span:first-child { color: var(--ink-2); }
+
+  /* Talks & publications */
+  .pubs { list-style: none; display: grid; border-top: 1px solid var(--line); }
+  .pub { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 20px; padding-block: 18px; border-bottom: 1px solid var(--line); }
+  .pub time { font-family: var(--font-mono); font-size: var(--step--1); color: var(--muted); padding-top: 4px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .pub .title { font-family: var(--font-display); font-size: 1.1875rem; line-height: 1.35; color: var(--ink); }
+  .pub .authors { margin-top: 6px; font-size: 0.9375rem; color: var(--ink-2); }
+  .pub .authors b { font-weight: 600; color: var(--ink); }
+  .pub .venue { font-size: 0.9375rem; color: var(--muted); }
+  .tag {
+    display: inline-block; font-family: var(--font-mono); font-size: 0.7188rem; letter-spacing: .05em; text-transform: uppercase;
+    padding: 2px 8px; border-radius: 4px; border: 1px solid var(--line); color: var(--muted); vertical-align: 2px; margin-right: 8px;
+  }
+  .tag-award { border-color: transparent; background: var(--accent-soft); color: var(--accent); }
+
+  /* Teaching */
+  .teach-lead { display: grid; gap: 14px; }
+  .courses { list-style: none; display: grid; border-top: 1px solid var(--line); }
+  .courses li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 20px; padding-block: 13px; border-bottom: 1px solid var(--line); align-items: baseline; }
+  .courses .course { color: var(--ink); }
+  .courses .note { grid-column: 1; font-size: 0.9063rem; color: var(--muted); }
+  .courses .term { grid-column: 2; grid-row: 1; font-family: var(--font-mono); font-size: var(--step--1); color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+  /* Awards & skills */
+  .awards-row { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: clamp(20px, 4vw, 40px); align-items: start; }
+  .awards-row .shot { max-width: 240px; }
+  .awards { list-style: none; display: grid; gap: 14px; }
+  .award { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 16px; align-items: baseline; }
+  .award .year { font-family: var(--font-mono); font-size: var(--step--1); color: var(--accent); }
+  .award h3 { font-family: var(--font-body); font-size: 1.0313rem; font-weight: 600; letter-spacing: 0; }
+  .award p { color: var(--muted); font-size: 0.9375rem; }
+  .skills { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 36px; }
+  .skill h3 { font-family: var(--font-body); font-size: 0.9688rem; font-weight: 600; letter-spacing: 0; margin-bottom: 6px; color: var(--ink); }
+  .skill p { font-size: 0.9375rem; color: var(--ink-2); line-height: 1.6; }
+
+  /* Contact */
+  .contact-card { display: grid; gap: 22px; padding: clamp(24px, 4vw, 36px); border-radius: var(--radius-card); background: var(--card-bg); border: 1px solid var(--line); box-shadow: var(--shadow-card); }
+  .contact-card p { color: var(--ink-2); max-width: 56ch; font-size: 1.0625rem; }
+  .contact-email { font-family: var(--font-display); font-size: clamp(1.375rem, 1rem + 1.6vw, 2rem); overflow-wrap: anywhere; text-decoration: none; border-bottom: 1px solid var(--ring); line-height: 1.3; justify-self: start; }
+  .contact-email:hover { border-bottom-color: var(--accent); }
+  .contact-list { list-style: none; display: grid; gap: 10px; }
+  .contact-list li { display: flex; gap: 10px; align-items: flex-start; color: var(--ink-2); }
+  .contact-list svg { width: 18px; height: 18px; color: var(--accent); flex-shrink: 0; margin-top: 4px; }
+
+  footer { border-top: 1px solid var(--line); padding-block: 28px; color: var(--muted); font-size: 0.875rem; }
+  .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px) {
+    .section-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+    .section-head { position: static; }
+    .specimen { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  }
+  @media (max-width: 720px) {
+    .topbar-inner { flex-wrap: wrap; gap: 0 12px; min-height: 0; padding-block: 10px 0; }
+    .brand-name { font-size: 1.0625rem; }
+    .theme-toggle { margin-left: auto; }
+    .nav { order: 3; width: 100%; margin: 6px 0 0; padding-bottom: 8px; margin-inline: -10px; width: calc(100% + 20px); }
+    .hero-grid { grid-template-columns: minmax(0, 1fr); }
+    .portrait { order: -1; width: 132px; aspect-ratio: 1; border-radius: 50%; }
+    .portrait .initials { font-size: 2.5rem; width: 72%; }
+    .skills { grid-template-columns: minmax(0, 1fr); }
+    .gallery { grid-template-columns: minmax(0, 1fr); }
+    .awards-row { grid-template-columns: minmax(0, 1fr); }
+    .section { scroll-margin-top: 104px; }
+  }
+  @media (max-width: 520px) {
+    .news li, .pub { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+    .news time, .pub time { padding-top: 0; }
+    .courses li { grid-template-columns: minmax(0, 1fr); }
+    .courses .term { grid-column: 1; grid-row: auto; }
+  }
+</style>
+<meta name="author" content="Shahriyar Motahari">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Shahriyar Motahari · PhD Candidate, Chemical Engineering, UBC">
+<meta property="og:description" content="Electrochemical systems that destroy PFAS, the forever chemicals, in water.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Shahriyar Motahari","jobTitle":"PhD Candidate, Chemical Engineering","affiliation":{"@type":"CollegeOrUniversity","name":"University of British Columbia"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Sharif University of Technology"},"email":"mailto:shahriyar.motahari@ubc.ca","sameAs":["https://www.linkedin.com/in/shahriyar-motahari-942290211"],"knowsAbout":["PFAS","Electrochemical water treatment","Water and wastewater treatment"]}
+</script>
+<script>try{var t=localStorage.getItem("sm-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="#top" aria-label="Shahriyar Motahari, back to top">
+      <span class="brand-mark" aria-hidden="true">SM</span>
+      <span class="brand-name">Shahriyar Motahari</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="#talks">Talks</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="label eyebrow">PhD Candidate · Chemical Engineering · University of British Columbia</p>
+          <h1>Shahriyar Motahari</h1>
+          <p class="lede">I develop electrochemical systems that <em>destroy PFAS</em>, the “forever chemicals,” in water, with higher degradation and lower energy use than conventional treatment.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="mailto:shahriyar.motahari@ubc.ca">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>
+              Email me
+            </a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/shahriyar-motahari-942290211" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.83v1.54h.06c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.13V21h-4v-5.02c0-1.2-.02-2.74-1.67-2.74-1.67 0-1.93 1.3-1.93 2.65V21h-4V9.75Z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+          <ul class="hero-facts">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+              Vancouver, BC
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c3 4 6 7.3 6 10.5a6 6 0 0 1-12 0c0-3.2 3-6.5 6-10.5Z"/></svg>
+              Water &amp; wastewater treatment
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2.5 5 13.5h6l-1 8 8-11h-6l1-8Z"/></svg>
+              Electrochemical engineering
+            </li>
+          </ul>
+        </div>
+        <div class="portrait">
+          <img src="photo.jpg" alt="Portrait of Shahriyar Motahari" width="800" height="1000">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="specimen">
+      <figure class="specimen-figure">
+        <div class="mol3d" id="mol3d">
+          <canvas id="mol-canvas" role="img" aria-label="Three-dimensional ball-and-stick model of the PFOA molecule. Drag to rotate."></canvas>
+          <div class="mol-static"><svg class="molecule" viewBox="10 18 600 190" role="img" aria-labelledby="mol-title mol-desc">
+      <title id="mol-title">Skeletal structure of PFOA</title>
+      <desc id="mol-desc">Perfluorooctanoic acid: a chain of seven fluorinated carbons ending in a carboxylic acid group, with one carbon–fluorine bond highlighted as breaking.</desc>
+      <line class="bond" x1="78.0" y1="146.0" x2="144.0" y2="102.0"/>
+      <line class="bond" x1="144.0" y1="102.0" x2="210.0" y2="146.0"/>
+      <line class="bond" x1="210.0" y1="146.0" x2="276.0" y2="102.0"/>
+      <line class="bond" x1="276.0" y1="102.0" x2="342.0" y2="146.0"/>
+      <line class="bond" x1="342.0" y1="146.0" x2="408.0" y2="102.0"/>
+      <line class="bond" x1="408.0" y1="102.0" x2="474.0" y2="146.0"/>
+      <line class="bond" x1="474.0" y1="146.0" x2="540.0" y2="102.0"/>
+      <line class="bond" x1="78.0" y1="146.0" x2="78.0" y2="113.0"/>
+      <line class="bond" x1="78.0" y1="146.0" x2="78.0" y2="179.0"/>
+      <line class="bond" x1="78.0" y1="146.0" x2="45.0" y2="146.0"/>
+      <line class="bond" x1="144.0" y1="102.0" x2="144.0" y2="69.0"/>
+      <line class="bond" x1="144.0" y1="102.0" x2="144.0" y2="135.0"/>
+      <line class="bond" x1="210.0" y1="146.0" x2="210.0" y2="113.0"/>
+      <line class="bond" x1="210.0" y1="146.0" x2="210.0" y2="179.0"/>
+      <line class="bond bond-break" x1="276.0" y1="102.0" x2="276.0" y2="70.0"/>
+      <line class="bond" x1="276.0" y1="102.0" x2="276.0" y2="135.0"/>
+      <line class="bond" x1="342.0" y1="146.0" x2="342.0" y2="113.0"/>
+      <line class="bond" x1="342.0" y1="146.0" x2="342.0" y2="179.0"/>
+      <line class="bond" x1="408.0" y1="102.0" x2="408.0" y2="69.0"/>
+      <line class="bond" x1="408.0" y1="102.0" x2="408.0" y2="135.0"/>
+      <line class="bond" x1="474.0" y1="146.0" x2="474.0" y2="113.0"/>
+      <line class="bond" x1="474.0" y1="146.0" x2="474.0" y2="179.0"/>
+      <text class="atom-f" x="78.0" y="102.0">F</text>
+      <text class="atom-f" x="78.0" y="190.0">F</text>
+      <text class="atom-f" x="34.0" y="146.0">F</text>
+      <text class="atom-f" x="144.0" y="58.0">F</text>
+      <text class="atom-f" x="144.0" y="146.0">F</text>
+      <text class="atom-f" x="210.0" y="102.0">F</text>
+      <text class="atom-f" x="210.0" y="190.0">F</text>
+      <g class="f-leaving"><text class="atom-f atom-f-leaving" x="276.0" y="58.0">F</text></g>
+      <text class="atom-f" x="276.0" y="146.0">F</text>
+      <text class="atom-f" x="342.0" y="102.0">F</text>
+      <text class="atom-f" x="342.0" y="190.0">F</text>
+      <text class="atom-f" x="408.0" y="58.0">F</text>
+      <text class="atom-f" x="408.0" y="146.0">F</text>
+      <text class="atom-f" x="474.0" y="102.0">F</text>
+      <text class="atom-f" x="474.0" y="190.0">F</text>
+      <line class="bond" x1="536.8" y1="102.0" x2="536.8" y2="69.0"/>
+      <line class="bond" x1="543.2" y1="102.0" x2="543.2" y2="69.0"/>
+      <text class="atom-o" x="540.0" y="58.0">O</text>
+      <line class="bond" x1="540.0" y1="102.0" x2="568.5" y2="118.5"/>
+      <text class="atom-o" x="586.0" y="124.0">OH</text>
+      <path class="leader" d="M288.0 52.0 L316.0 32.0 H334.0"/>
+      <text class="annot" x="340.0" y="36.0">C–F ≈ 485 kJ/mol</text>
+    </svg></div>
+          <div class="mol-controls">
+            <button class="mol-btn" type="button" id="mol-spin" aria-pressed="true">Pause</button>
+            <button class="mol-btn" type="button" id="mol-reset">Reset view</button>
+          </div>
+          <div class="mol-meta">
+            <span class="mol-hint">Drag to rotate · scroll to zoom</span>
+            <ul class="mol-legend" aria-label="Atom colours">
+              <li><span class="dot dot-c"></span>C</li>
+              <li><span class="dot dot-f"></span>F</li>
+              <li><span class="dot dot-o"></span>O</li>
+              <li><span class="dot dot-h"></span>H</li>
+            </ul>
+          </div>
+        </div>
+      </figure>
+      <div class="specimen-caption">
+        <p class="label">Research focus</p>
+        <h2>Breaking the unbreakable</h2>
+        <p>PFAS such as PFOA are held together by carbon–fluorine bonds (≈485 kJ/mol), among the strongest in organic chemistry. That is why they persist in water and resist conventional treatment. My PhD work engineers electrochemical reactors that break those bonds and mineralize the molecule.</p>
+        <p class="formula">PFOA · C<sub>8</sub>HF<sub>15</sub>O<sub>2</sub></p>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" id="about" aria-labelledby="about-title">
+    <div class="wrap section-grid">
+      <div class="section-head">
+        <h2 id="about-title">About</h2>
+      </div>
+      <div class="stack">
+        <div class="prose">
+          <p>I’m a PhD candidate in <strong>Chemical Engineering at the University of British Columbia</strong>, which I joined in 2024, where I research the electrochemical treatment of per- and polyfluoroalkyl substances (PFAS) in water. I design and optimize reactors and electrodes that degrade these persistent contaminants more completely and efficiently. I also study how real water chemistry, such as natural organic matter and electrolyte concentration, affects removal, selectivity and energy demand over long-term operation.</p>
+          <p>I earned my BSc in 2018 and my MSc in 2022, both in Chemical Engineering at <strong>Sharif University of Technology</strong>, where I built a fungal bioreactor that removes pharmaceuticals from water. Between the MSc and the PhD I worked in industry: as an R&amp;D engineer on atmospheric water harvesting, and in business and research development on filtration systems and EPC projects.</p>
+          <p>Alongside research, I teach Introduction to Engineering with UBC Extended Learning, serve as a teaching assistant in water, environmental and chemical engineering courses, and mentor undergraduate researchers in the lab.</p>
+        </div>
+        <div>
+          <h3 class="sub-head">Research interests</h3>
+          <ul class="chips">
+            <li>PFAS destruction</li>
+            <li>Electrochemical oxidation</li>
+            <li>Reactor &amp; electrode design</li>
+            <li>Water &amp; wastewater treatment</li>
+            <li>Advanced oxidation processes</li>
+            <li>Biological treatment</li>
+            <li>Sustainable water technologies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="news" aria-labelledby="news-title">
+    <div class="wrap section-grid">
+      <div class="section-head">
+        <h2 id="news-title">Recent</h2>
+        <p>Talks, milestones and new roles.</p>
+      </div>
+      <ul class="news">
+        <li><time datetime="2026-08">Aug 2026</time><p>Joined the <strong>BC Literacy Screen Project</strong> at UBC as a graduate research assistant.</p></li>
+        <li><time datetime="2026-07">Jul–Aug 2026</time><p>Taught three summer sessions of <strong>Introduction to Engineering</strong> in UBC’s Future Global Leaders (FGL) pre-university program, from early July to mid-August.</p></li>
+        <li><time datetime="2026-07-28">28 Jul 2026</time><p>Defended my <strong>PhD candidacy</strong> at UBC.</p></li>
+        <li><time datetime="2026-06">Jun 2026</time><p>Presented <cite>Electrochemical PFAS Degradation</cite> at the CSC/CSChE conference in Toronto, and co-authored two more talks there on PFAS oxidation in complex water matrices and groundwater treatment for remote communities.</p></li>
+        <li><time datetime="2026-03">Mar 2026</time><p>Competed in the UBC-wide Three Minute Thesis (3MT) semi-final.</p></li>
+        <li><time datetime="2026-02">Feb 2026</time><p>Won <strong>2nd place</strong> in the CHBE Research Day 3MT competition with <cite>Breaking the Unbreakable: Destroying Forever Chemicals</cite>.</p></li>
+        <li><time datetime="2025-11">Nov 2025</time><p>Presented <cite>Enhanced PFAS Degradation Using a Novel Electrochemical Reactor</cite> at the Water Quality Technology Conference (WQTC).</p></li>
+        <li><time datetime="2025-07">Jul 2025</time><p>Started teaching Introduction to Engineering at UBC Extended Learning.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="research" aria-labelledby="research-title">
+    <div class="wrap section-grid">
+      <div class="section-head">
+        <h2 id="research-title">Research</h2>
+        <p>Engineering treatment processes for contaminants that conventional systems leave behind.</p>
+      </div>
+      <div class="stack">
+        <article class="project">
+          <div class="project-meta">
+            <span class="label">UBC · Chemical &amp; Biological Engineering</span>
+            <span class="label">2024–present</span>
+          </div>
+          <h3 class="project-title">
+            <button class="project-toggle" type="button" aria-expanded="false" aria-controls="proj-pfas">
+              <span>Electrochemical degradation of PFAS in water</span>
+              <span class="project-more"><span class="project-more-label">Read more</span><span class="project-sign" aria-hidden="true"></span></span>
+            </button>
+          </h3>
+          <p class="project-short">A novel electrochemical system that degrades and mineralizes PFAS far more completely than a conventional cell, while using roughly a third less energy.</p>
+          <div class="metrics">
+            <div class="metric"><span class="num">+30–40%</span><span class="what">degradation and mineralization</span></div>
+            <div class="metric"><span class="num">≈ −30%</span><span class="what">energy consumption</span></div>
+          </div>
+          <div class="project-body" id="proj-pfas">
+            <div class="project-body-inner">
+              <p>This research investigates electrochemical oxidation for the degradation of both short- and long-chain per- and polyfluoroalkyl substances (PFAS) in contaminated water. The work examines how different PFAS compounds respond to treatment, focusing on degradation efficiency, energy consumption and the formation of transformation products. It also evaluates defluorination — the release of fluorine from PFAS molecules as fluoride — to better understand the extent of their breakdown. The overall goal is to deepen our understanding of electrochemical PFAS destruction and support the development of effective, energy-efficient treatment technologies for these persistent environmental contaminants.</p>
+              <ul class="ticks">
+                <li>Optimized reactor performance across hydrodynamic, electrochemical and electrode-design parameters: flow rate, current density, electrode spacing and particle loading.</li>
+                <li>Assessed how natural organic matter and electrolyte concentration affect PFAS removal, selectivity and energy demand under environmentally relevant conditions.</li>
+                <li>Investigated long-term operation, electrode passivation and in-situ regeneration strategies to reduce downtime.</li>
+                <li>Supervise and mentor undergraduate researchers in experimental planning, lab methods and data analysis.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-meta">
+            <span class="label">Sharif University · MSc</span>
+            <span class="label">2019–2022</span>
+          </div>
+          <h3 class="project-title">
+            <button class="project-toggle" type="button" aria-expanded="false" aria-controls="proj-rbc">
+              <span>Fungal bioreactor for pharmaceutical removal</span>
+              <span class="project-more"><span class="project-more-label">Read more</span><span class="project-sign" aria-hidden="true"></span></span>
+            </button>
+          </h3>
+          <p class="project-short">A rotating biological contactor carrying an immobilized <i>Trametes</i> biofilm, which combines fungal biodegradation with advanced bio-oxidation to remove pharmaceuticals from wastewater.</p>
+          <div class="metrics">
+            <div class="metric"><span class="num">100%</span><span class="what">diclofenac removal</span></div>
+            <div class="metric"><span class="num">≈ 60%</span><span class="what">carbamazepine removal</span></div>
+            <div class="metric"><span class="num">+30%</span><span class="what">performance vs. the control system</span></div>
+          </div>
+          <div class="project-body" id="proj-rbc">
+            <div class="project-body-inner">
+              <p>This project investigated the removal of pharmaceutical contaminants from wastewater using a fungal rotating biological contactor (RBC). <i>Trametes</i> fungi were immobilized on carriers, and the rotation of the drum promoted contact between the fungal biomass, the wastewater and the air. The work compared conventional biological treatment with advanced bio-oxidation for the removal of diclofenac, metronidazole and levofloxacin. Under the laboratory conditions tested, the combined approach achieved complete removal of diclofenac and approximately 60% removal of carbamazepine, which points to the potential of fungal systems for treating pharmaceutical wastewater.</p>
+              <figure class="project-figure">
+                <button class="shot-btn project-shot" type="button" data-full="images/rbc-reactor.jpg" data-cap="Lab-scale fungal rotating biological contactor: carriers colonized by Trametes biofilm, mounted in a rotating drum that passes through the wastewater and the air above it.">
+                  <img src="images/rbc-reactor.jpg" alt="Rotating biological contactor: a mesh drum filled with biofilm carriers, half submerged in a clear tank of water, with a close-up of one colonized carrier" loading="lazy" decoding="async" width="1400" height="788">
+                </button>
+                <figcaption>The rotating drum holds carriers colonized by fungal biofilm; each turn brings the biomass through the wastewater and then through the air. Inset: a single carrier.</figcaption>
+              </figure>
+              <ul class="ticks">
+                <li>Engineered the biofilm to generate hydrogen peroxide in situ, pairing fungal biodegradation with biologically mediated advanced oxidation.</li>
+                <li>Separated biodegradation from adsorption and traced degradation pathways and transformation intermediates.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-meta">
+            <span class="label">Bonda Innovation Center</span>
+            <span class="label">2021–2022</span>
+          </div>
+          <h3 class="project-title">
+            <button class="project-toggle" type="button" aria-expanded="false" aria-controls="proj-fog">
+              <span>Atmospheric water harvesting</span>
+              <span class="project-more"><span class="project-more-label">Read more</span><span class="project-sign" aria-hidden="true"></span></span>
+            </button>
+          </h3>
+          <p class="project-short">An electrically assisted fog-harvesting system that recovers water from airborne droplets, using a high voltage to pull them onto a mesh collector.</p>
+          <div class="metrics">
+            <div class="metric"><span class="num">≈ 25%</span><span class="what">water-collection efficiency of the prototype</span></div>
+            <div class="metric"><span class="num">3×</span><span class="what">collection efficiency with the high-voltage assist</span></div>
+          </div>
+          <div class="project-body" id="proj-fog">
+            <div class="project-body-inner">
+              <p>As part of the Bonda group, I worked on developing an electrically assisted fog-harvesting system to recover water from airborne droplets. Our laboratory setup combined a fog generator, a high-voltage power supply and a mesh collector positioned above the fog chamber to promote electrostatic droplet capture. The prototype achieved approximately 25% water-collection efficiency under the conditions tested. The work explored an approach with potential applications in atmospheric water harvesting and in water recovery from industrial cooling-tower plumes.</p>
+              <ul class="ticks">
+                <li>The high-voltage assist tripled collection efficiency compared with the unassisted collector.</li>
+                <li>Modified the surface of the collector to improve droplet capture and overall system performance.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="experience" aria-labelledby="experience-title">
+    <div class="wrap section-grid">
+      <div class="section-head">
+        <h2 id="experience-title">Experience</h2>
+        <p>Research, industry and university service.</p>
+      </div>
+      <div class="stack">
+        <ol class="timeline">
+          <li class="role current">
+            <div class="role-top"><h3>Graduate Research Assistant</h3><span class="when">Aug 2026–present</span></div>
+            <span class="org">BC Literacy Screen Project, University of British Columbia</span>
+            <ul class="ticks">
+              <li>Conducting a systematic literature review on literacy screening and data-informed instruction, evaluating peer-reviewed studies for relevance, methodology and quality.</li>
+              <li>Extracting and synthesizing qualitative and quantitative evidence into structured summaries that support recommendations for screening and instructional practice.</li>
+            </ul>
+          </li>
+          <li class="role current">
+            <div class="role-top"><h3>PhD Researcher</h3><span class="when">May 2024–present</span></div>
+            <span class="org">Department of Chemical and Biological Engineering, University of British Columbia</span>
+            <ul class="ticks">
+              <li>Electrochemical PFAS degradation: reactor engineering, water-matrix effects and long-term electrode performance (<a href="#research">see Research</a>).</li>
+            </ul>
+          </li>
+          <li class="role">
+            <div class="role-top"><h3>Business and Research Development Engineer</h3><span class="when">Nov 2022–Mar 2024</span></div>
+            <span class="org">Hirbodan Management Co.</span>
+            <ul class="ticks">
+              <li>Led the design of an innovative filtration system for a subsidiary, helping position the company among Iran’s top knowledge-based companies.</li>
+              <li>Designed a standardized monthly reporting format that was adopted company-wide.</li>
+              <li>Contributed to engineering, procurement and construction (EPC) projects implementing industrial-scale solutions.</li>
+              <li>Facilitated meetings with international renewable-energy companies, leading to signed NDAs and collaboration agreements.</li>
+            </ul>
+          </li>
+          <li class="role">
+            <div class="role-top"><h3>Research and Development Engineer</h3><span class="when">Nov 2021–Sep 2022</span></div>
+            <span class="org">Bonda Innovation Center, Tehran</span>
+            <ul class="ticks">
+              <li>Developed atmospheric water-harvesting systems, including a high-voltage-assisted fog collector that tripled collection efficiency.</li>
+              <li>Modified collector surfaces to improve droplet capture and managed milestones and technical deliverables under tight deadlines.</li>
+            </ul>
+          </li>
+          <li class="role">
+            <div class="role-top"><h3>Graduate Researcher (MSc)</h3><span class="when">Sep 2019–2022</span></div>
+            <span class="org">Department of Chemical Engineering, Sharif University of Technology</span>
+            <ul class="ticks">
+              <li>Developed a fungal rotating biological contactor for pharmaceutical removal and managed laboratory operations, safety practices and shared equipment.</li>
+            </ul>
+          </li>
+        </ol>
+        <div>
+          <h3 class="sub-head">University service</h3>
+          <ul class="service">
+            <li><span>Senior Invigilator, Centre for Accessibility, UBC</span><span class="when">May 2026–present</span></li>
+            <li><span>Invigilator, Centre for Accessibility, UBC</span><span class="when">Mar 2025–present</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="talks" aria-labelledby="talks-title">
+    <div class="wrap section-grid">
+      <div class="section-head">
+        <h2 id="talks-title">Talks &amp; publications</h2>
+        <p>Oral and poster presentations and conference papers.</p>
+      </div>
+      <div class="stack">
+        <div>
+          <h3 class="sub-head">On stage</h3>
+          <div class="gallery">
+            <figure class="shot">
+              <button class="shot-btn" type="button" data-full="images/talk-candidacy.jpg" data-cap="Defending my PhD candidacy at UBC, July 2026 — presenting the selection of short- and long-chain PFAS compounds for the study.">
+                <img src="images/talk-candidacy.jpg" alt="Presenting a slide on PFAS compound selection to a seminar room of committee members at UBC" loading="lazy" decoding="async" width="1000" height="750">
+              </button>
+              <figcaption><b>PhD candidacy defence, UBC</b> — PFAS compound selection, July 2026.</figcaption>
+            </figure>
+            <figure class="shot">
+              <button class="shot-btn" type="button" data-full="images/talk-csche.jpg" data-cap="Presenting PFAS destruction technologies at the Canadian Societies for Chemistry and Chemical Engineering conference, Toronto, 2026.">
+                <img src="images/talk-csche.jpg" alt="Presenting a slide on PFAS destruction technologies at a conference in Toronto" loading="lazy" decoding="async" width="1000" height="750">
+              </button>
+              <figcaption><b>CSC/CSChE, Toronto</b> — Electrochemical PFAS degradation, 2026.</figcaption>
+            </figure>
+            <figure class="shot">
+              <button class="shot-btn" type="button" data-full="images/talk-wqtc.jpg" data-cap="Introduction before my talk at the AWWA Water Quality Technology Conference, November 2025.">
+                <img src="images/talk-wqtc.jpg" alt="Introduction slide before a talk at the Water Quality Technology Conference" loading="lazy" decoding="async" width="1000" height="750">
+              </button>
+              <figcaption><b>WQTC (AWWA)</b> — Enhanced PFAS degradation using a novel electrochemical reactor, 2025.</figcaption>
+            </figure>
+            <figure class="shot">
+              <button class="shot-btn" type="button" data-full="images/talk-3mt.jpg" data-cap="Breaking the Unbreakable: Destroying Forever Chemicals — CHBE Research Day Three Minute Thesis competition, UBC, 2026.">
+                <img src="images/talk-3mt.jpg" alt="Presenting in a UBC lecture hall during the Three Minute Thesis competition" loading="lazy" decoding="async" width="1000" height="750">
+              </button>
+              <figcaption><b>CHBE Research Day 3MT, UBC</b> — Breaking the Unbreakable, 2026.</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div>
+          <h3 class="sub-head">Oral presentations</h3>
+          <ul class="pubs">
+            <li class="pub">
+              <time datetime="2026-06">Jun 2026</time>
+              <div>
+                <p class="title">Electrochemical PFAS Degradation</p>
+                <p class="authors"><b>Motahari, S.</b>, Mohseni, M.</p>
+                <p class="venue">Canadian Societies for Chemistry and Chemical Engineering Conference, Toronto, ON</p>
+              </div>
+            </li>
+            <li class="pub">
+              <time datetime="2026-06">Jun 2026</time>
+              <div>
+                <p class="title">Resolution of PFAS Electrochemical Oxidation under Complex Water Matrices through Integrated Experiments and Reaction Engineering Analysis</p>
+                <p class="authors">Abbasi, P., <b>Motahari, S.</b>, Mohseni, M.</p>
+                <p class="venue">Canadian Societies for Chemistry and Chemical Engineering Conference, Toronto, ON</p>
+              </div>
+            </li>
+            <li class="pub">
+              <time datetime="2026-06">Jun 2026</time>
+              <div>
+                <p class="title">Treatment of Iron- and Manganese-Rich Groundwater for Small and Remote Canadian Communities</p>
+                <p class="authors">Shahmansoori, M., <b>Motahari, S.</b>, Mohseni, M.</p>
+                <p class="venue">Canadian Societies for Chemistry and Chemical Engineering Conference, Toronto, ON</p>
+              </div>
+            </li>
+            <li class="pub">
+              <time datetime="2026-03">Mar 2026</time>
+              <div>
+                <p class="title">Breaking the Unbreakable: Destroying Forever Chemicals</p>
+                <p class="authors"><b>Motahari, S.</b></p>
+                <p class="venue">UBC Three Minute Thesis (3MT) Semi-final, Vancouver, BC</p>
+              </div>
+            </li>
+            <li class="pub">
+              <time datetime="2026-02">Feb 2026</time>
+              <div>
+                <p class="title">Breaking the Unbreakable: Destroying Forever Chemicals</p>
+                <p class="authors"><b>Motahari, S.</b></p>
+                <p class="venue"><span class="tag tag-award">2nd place</span>UBC CHBE Research Day Three Minute Thesis (3MT), Vancouver, BC</p>
+              </div>
+            </li>
+            <li class="pub">
+              <time datetime="2025-11">Nov 2025</time>
+              <div>
+                <p class="title">Enhanced PFAS Degradation Using a Novel Electrochemical Reactor</p>
+                <p class="authors"><b>Motahari, S.</b>, Mohseni, M.</p>
+                <p class="venue">Water Quality Technology Conference (WQTC), BC, Canada</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="sub-head">Poster &amp; conference paper</h3>
+          <ul class="pubs">
+            <li class="pub">
+              <time datetime="2022-06">Jun 2022</time>
+              <div>
+                <p class="title">Pharmaceutical Wastewater Treatment Using an Advanced Bio-Oxidation Process</p>
+                <p class="authors"><b>Motahari, S.</b>, Ghasemian, S.</p>
+                <p class="venue"><span class="tag">Poster</span>Sharif University of Technology, Tehran, Iran</p>
+              </div>
+            </li>
+            <li class="pub">
+              <time datetime="2021-03">Mar 2021</time>
+              <div>
+                <p class="title">Removal of Pharmaceutical Compounds and Dyes Using a Combined Advanced Oxidation and Biological Treatment Process</p>
+                <p class="authors"><b>Motahari, S.</b>, Ghasemian, S.</p>
+                <p class="venue"><span class="tag">Paper</span>17th Iranian National Congress of Chemical Engineering</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="teaching" aria-labelledby="teaching-title">
+    <div class="wrap section-grid">
+      <div class="section-head">
+        <h2 id="teaching-title">Teaching</h2>
+        <p>Instruction and teaching assistantships at UBC and Sharif.</p>
+      </div>
+      <div class="stack">
+        <article class="project teach-lead">
+          <div class="project-meta">
+            <span class="label">Instructor · UBC Extended Learning · Future Global Leaders</span>
+            <span class="label">Jul 2025–present</span>
+          </div>
+          <h3>Introduction to Engineering</h3>
+          <ul class="chips" aria-label="Topics covered">
+            <li>Mechanics</li><li>Heat transfer</li><li>Fluid mechanics</li><li>Circuits</li><li>Machine learning</li><li>Engineering design</li>
+          </ul>
+          <ul class="ticks">
+            <li>Deliver interactive instruction and run hands-on activities and team design challenges that connect theory with practical problem-solving.</li>
+            <li>Develop quizzes and instructional materials, and implement accessibility accommodations so every student can take part.</li>
+            <li>Coordinate engineering tours that show students real-world applications.</li>
+          </ul>
+        </article>
+        <div>
+          <h3 class="sub-head">In the classroom</h3>
+          <div class="gallery">
+            <figure class="shot">
+              <button class="shot-btn" type="button" data-full="images/teach-2026-s3.jpg" data-cap="Introduction to Engineering, session 3, 2026 — on campus with students between classes.">
+                <img src="images/teach-2026-s3.jpg" alt="With students from the session 3 class on the UBC campus" loading="lazy" decoding="async" width="1000" height="750">
+              </button>
+              <figcaption><b>Session 3, 2026</b> — on campus between classes.</figcaption>
+            </figure>
+            <figure class="shot">
+              <button class="shot-btn" type="button" data-full="images/teach-2026-s2.jpg" data-cap="Final presentations at the end of Introduction to Engineering, session 2, 2026.">
+                <img src="images/teach-2026-s2.jpg" alt="Selfie with students in front of a Final Presentations slide" loading="lazy" decoding="async" width="1000" height="750">
+              </button>
+              <figcaption><b>Session 2, 2026</b> — final presentations day.</figcaption>
+            </figure>
+            <figure class="shot">
+              <button class="shot-btn" type="button" data-full="images/teach-2026-s1.jpg" data-cap="Introduction to Engineering, session 1, summer 2026.">
+                <img src="images/teach-2026-s1.jpg" alt="Group photo with the session 1 class in a UBC classroom" loading="lazy" decoding="async" width="1000" height="750">
+              </button>
+              <figcaption><b>Session 1, 2026</b> — Introduction to Engineering, UBC Extended Learning.</figcaption>
+            </figure>
+            <figure class="shot">
+              <button class="shot-btn" type="button" data-full="images/teach-2025.jpg" data-cap="Introduction to Engineering, 2025 cohort.">
+                <img src="images/teach-2025.jpg" alt="Selfie with a large class of students in a UBC classroom" loading="lazy" decoding="async" width="1000" height="750">
+              </button>
+              <figcaption><b>2025 cohort</b> — my first Introduction to Engineering group.</figcaption>
+            </figure>
+            <figure class="shot">
+              <button class="shot-btn" type="button" data-full="images/teach-pasta-build.jpg" data-cap="Students building a spaghetti-and-marshmallow truss during the bridge design challenge.">
+                <img src="images/teach-pasta-build.jpg" alt="Students assembling a spaghetti and marshmallow structure on a classroom desk" loading="lazy" decoding="async" width="1000" height="750">
+              </button>
+              <figcaption><b>Pasta bridge challenge</b> — teams design, build and test a truss.</figcaption>
+            </figure>
+            <figure class="shot">
+              <button class="shot-btn" type="button" data-full="images/teach-pasta-bridge.jpg" data-cap="A finished spaghetti-and-marshmallow truss bridge from the design challenge.">
+                <img src="images/teach-pasta-bridge.jpg" alt="A completed spaghetti and marshmallow truss bridge on a desk" loading="lazy" decoding="async" width="1000" height="750">
+              </button>
+              <figcaption><b>The finished truss</b> — spaghetti, marshmallows and a lot of triangles.</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div>
+          <h3 class="sub-head">Teaching assistant · University of British Columbia</h3>
+          <ul class="courses">
+            <li><span class="course">Environmental Engineering Design and Decision Making</span><span class="note">Weekly tutorials</span><span class="term">2026 W1</span></li>
+            <li><span class="course">Water and Wastewater Technology and Engineering</span><span class="note">Weekly tutorials and grading</span><span class="term">2026 W1 · 2024 W1</span></li>
+            <li><span class="course">Introductory Physics Laboratory for Engineers</span><span class="note">Weekly lab sessions and grading</span><span class="term">2025 W2</span></li>
+            <li><span class="course">Chemical Engineering Laboratory</span><span class="note">Grading and student support</span><span class="term">2025 W2</span></li>
+            <li><span class="course">Technical Communications for Environmental Engineering</span><span class="note">Instruction support and feedback on technical writing</span><span class="term">2024 W2</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="sub-head">Teaching assistant · Sharif University of Technology</h3>
+          <ul class="courses">
+            <li><span class="course">Microbiology Laboratory</span><span class="note">Aseptic technique, culturing, staining, microscopy, plate counts and biosafety</span><span class="term">2021 · 2022</span></li>
+            <li><span class="course">Water and Wastewater Engineering Laboratory</span><span class="note">COD, BOD, turbidity, suspended solids, pH and alkalinity measurements</span><span class="term">2021 · 2022</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="awards" aria-labelledby="awards-title">
+    <div class="wrap section-grid">
+      <div class="section-head">
+        <h2 id="awards-title">Awards &amp; skills</h2>
+      </div>
+      <div class="stack">
+        <div>
+        <h3 class="sub-head">Awards</h3>
+        <div class="awards-row">
+        <ul class="awards">
+          <li class="award">
+            <span class="year">2026</span>
+            <div><h3>2nd Place, Three Minute Thesis (3MT®)</h3><p>Department of Chemical and Biological Engineering, UBC</p></div>
+          </li>
+          <li class="award">
+            <span class="year">2021</span>
+            <div><h3>Graduate Research Scholarship, City of Tehran</h3><p>For research on advanced bio-oxidation water treatment technologies</p></div>
+          </li>
+        </ul>
+        <figure class="shot shot--portrait">
+          <button class="shot-btn" type="button" data-full="images/award-3mt.jpg" data-cap="Receiving the 2nd place award at the CHBE Research Day Three Minute Thesis competition, UBC, 2026.">
+            <img src="images/award-3mt.jpg" alt="Receiving the 3MT second place certificate at UBC" loading="lazy" decoding="async" width="750" height="1000">
+          </button>
+          <figcaption><b>2nd place, 3MT</b> — CHBE Research Day, 2026.</figcaption>
+        </figure>
+        </div>
+        </div>
+        <div>
+        <h3 class="sub-head">Technical skills</h3>
+        <div class="skills">
+          <div class="skill"><h3>Water &amp; wastewater treatment</h3><p>Electrochemical treatment, coagulation–flocculation, dissolved air flotation (DAF), rotating biological contactors, advanced biological oxidation</p></div>
+          <div class="skill"><h3>Electrochemical techniques</h3><p>Cyclic voltammetry (CV), linear sweep voltammetry (LSV), impedance spectroscopy (EIS), galvanostatic operation, polarization and overpotential analysis</p></div>
+          <div class="skill"><h3>Water quality analysis</h3><p>COD, BOD, TOC, turbidity, pH, conductivity, alkalinity, suspended solids, ion concentration, fluoride analysis</p></div>
+          <div class="skill"><h3>Experimental design &amp; data analysis</h3><p>Design of experiments, Box–Behnken design, kinetic modeling, regression and statistical analysis, process optimization, energy-consumption analysis</p></div>
+          <div class="skill"><h3>Biological techniques</h3><p>Fungal biofilms, microorganism immobilization, microbial culturing, aseptic technique, serial dilution, plate counting, staining, microscopy</p></div>
+          <div class="skill"><h3>Software</h3><p>MATLAB, Python, OriginPro, Design-Expert, AutoCAD, electrochemical data-analysis and fitting software</p></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact" aria-labelledby="contact-title">
+    <div class="wrap section-grid">
+      <div class="section-head">
+        <h2 id="contact-title">Contact</h2>
+      </div>
+      <div class="contact-card">
+        <p>I’m happy to talk about PFAS treatment, electrochemical water technologies, teaching or research collaborations.</p>
+        <a class="contact-email" href="mailto:shahriyar.motahari@ubc.ca">shahriyar.motahari@ubc.ca</a>
+        <ul class="contact-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.83v1.54h.06c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.13V21h-4v-5.02c0-1.2-.02-2.74-1.67-2.74-1.67 0-1.93 1.3-1.93 2.65V21h-4V9.75Z"/></svg>
+            <a href="https://www.linkedin.com/in/shahriyar-motahari-942290211" target="_blank" rel="noopener">linkedin.com/in/shahriyar-motahari</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <span>Department of Chemical and Biological Engineering<br>University of British Columbia, Vancouver, BC</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<dialog class="lightbox" id="lightbox" aria-label="Photo">
+  <div class="lightbox-inner">
+    <img id="lightbox-img" alt="" hidden>
+    <p class="lightbox-cap" id="lightbox-cap"></p>
+  </div>
+  <button class="lightbox-close" type="button" id="lightbox-close" aria-label="Close photo">&times;</button>
+</dialog>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>© 2026 Shahriyar Motahari</span>
+    <span>Last updated September 2026</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById("theme-toggle");
+    var KEY = "sm-theme";
+    try {
+      var saved = localStorage.getItem(KEY);
+      if (saved === "light" || saved === "dark") root.setAttribute("data-theme", saved);
+    } catch (e) {}
+    function isDark() {
+      var t = root.getAttribute("data-theme");
+      if (t) return t === "dark";
+      return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    }
+    function sync() {
+      var dark = isDark();
+      btn.setAttribute("aria-pressed", String(dark));
+      btn.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+    }
+    btn.addEventListener("click", function () {
+      var next = isDark() ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem(KEY, next); } catch (e) {}
+      sync();
+    });
+    if (window.matchMedia) {
+      var mq = window.matchMedia("(prefers-color-scheme: dark)");
+      if (mq.addEventListener) mq.addEventListener("change", sync);
+    }
+    new MutationObserver(sync).observe(root, { attributes: true, attributeFilter: ["data-theme"] });
+    sync();
+
+
+    // 3D molecule viewer (PFOA), hand-rolled so the page stays self-contained
+    (function () {
+      var host = document.getElementById("mol3d");
+      var canvas = document.getElementById("mol-canvas");
+      if (!host || !canvas || !canvas.getContext) return;
+      var ctx = canvas.getContext("2d");
+      if (!ctx) return;
+      var MOL = {"atoms":[{"el":"C","p":[-4.59,0.361,-0.016]},{"el":"C","p":[-3.298,-0.465,-0.118]},{"el":"C","p":[-2.007,0.312,0.181]},{"el":"C","p":[-0.715,-0.37,-0.297]},{"el":"C","p":[0.577,0.176,0.331]},{"el":"C","p":[1.868,-0.202,-0.41]},{"el":"C","p":[3.16,-0.014,0.401]},{"el":"C","p":[4.451,0.0,-0.432]},{"el":"F","p":[-3.213,-0.957,-1.361]},{"el":"F","p":[-3.384,-1.483,0.749]},{"el":"F","p":[-1.921,0.489,1.506]},{"el":"F","p":[-2.092,1.51,-0.414]},{"el":"F","p":[-0.63,-0.22,-1.626]},{"el":"F","p":[-0.8,-1.676,-0.009]},{"el":"F","p":[0.662,-0.29,1.585]},{"el":"F","p":[0.491,1.513,0.368]},{"el":"F","p":[1.954,0.554,-1.514]},{"el":"F","p":[1.783,-1.49,-0.77]},{"el":"F","p":[3.245,-1.015,1.288]},{"el":"F","p":[3.074,1.149,1.061]},{"el":"F","p":[-4.448,1.499,-0.71]},{"el":"F","p":[-5.612,-0.344,-0.519]},{"el":"F","p":[-4.836,0.65,1.269]},{"el":"O","p":[4.398,-0.13,-1.633]},{"el":"O","p":[5.637,0.157,0.173]},{"el":"H","p":[6.246,0.284,0.917]}],"bonds":[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[1,8],[1,9],[2,10],[2,11],[3,12],[3,13],[4,14],[4,15],[5,16],[5,17],[6,18],[6,19],[0,20],[0,21],[0,22],[7,23,2],[7,24],[24,25]]};
+      var RADII = { C: 0.62, F: 0.52, O: 0.57, H: 0.33 };
+      var colors = {};
+
+      function readColors() {
+        var cs = getComputedStyle(document.documentElement);
+        colors = {
+          C: cs.getPropertyValue("--mol-c").trim() || "#46585f",
+          F: cs.getPropertyValue("--mol-f").trim() || "#4f9247",
+          O: cs.getPropertyValue("--mol-o").trim() || "#c0544a",
+          H: cs.getPropertyValue("--mol-h").trim() || "#cfd8d6"
+        };
+      }
+
+      function shade(hex, amount) {
+        var h = hex.replace("#", "");
+        if (h.length === 3) h = h[0] + h[0] + h[1] + h[1] + h[2] + h[2];
+        var n = parseInt(h, 16);
+        var r = (n >> 16) & 255, g = (n >> 8) & 255, b = n & 255;
+        var t = amount > 0 ? 255 : 0, k = Math.abs(amount);
+        return "rgb(" + Math.round(r + (t - r) * k) + "," + Math.round(g + (t - g) * k) + "," + Math.round(b + (t - b) * k) + ")";
+      }
+
+      var yaw = -0.5, pitch = 0.32, zoom = 1, spinning = true, dragging = false, lastX = 0, lastY = 0;
+      var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduced) spinning = false;
+      var spinBtn = document.getElementById("mol-spin");
+      var W = 0, H = 0, dpr = 1;
+
+      var span = 0, spanR = 0;
+      MOL.atoms.forEach(function (a) {
+        span = Math.max(span, Math.hypot(a.p[0], a.p[1], a.p[2]));
+        spanR = Math.max(spanR, Math.hypot(a.p[1], a.p[2]));
+      });
+
+      function resize() {
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        W = canvas.clientWidth; H = canvas.clientHeight;
+        canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+
+      function project() {
+        var cy = Math.cos(yaw), sy = Math.sin(yaw), cp = Math.cos(pitch), sp = Math.sin(pitch);
+        var scale = Math.min(W / (2.5 * span), H / (3.3 * spanR)) * zoom;
+        var camera = span * 4.2;
+        return MOL.atoms.map(function (a) {
+          var x = a.p[0] * cy + a.p[2] * sy;
+          var z = -a.p[0] * sy + a.p[2] * cy;
+          var y = a.p[1] * cp - z * sp;
+          z = a.p[1] * sp + z * cp;
+          var k = camera / (camera - z);
+          return { x: W / 2 + x * scale * k, y: H / 2 - y * scale * k, z: z, k: k, s: scale * k, el: a.el };
+        });
+      }
+
+      function sphere(p) {
+        var r = RADII[p.el] * p.s;
+        var base = colors[p.el] || colors.C;
+        var g = ctx.createRadialGradient(p.x - r * 0.35, p.y - r * 0.4, r * 0.12, p.x, p.y, r);
+        g.addColorStop(0, shade(base, 0.55));
+        g.addColorStop(0.55, base);
+        g.addColorStop(1, shade(base, -0.38));
+        ctx.fillStyle = g;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      function stick(a, b, colorAtom, dbl) {
+        var mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2;
+        var w = 0.15 * ((a.s + b.s) / 2);
+        ctx.strokeStyle = shade(colors[colorAtom.el] || colors.C, -0.12);
+        ctx.lineCap = "round";
+        if (!dbl) {
+          ctx.lineWidth = w * 2;
+          ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mx, my); ctx.stroke();
+          return;
+        }
+        var dx = b.x - a.x, dy = b.y - a.y, L = Math.hypot(dx, dy) || 1;
+        var ox = (-dy / L) * w * 1.15, oy = (dx / L) * w * 1.15;
+        ctx.lineWidth = w * 1.1;
+        ctx.beginPath(); ctx.moveTo(a.x + ox, a.y + oy); ctx.lineTo(mx + ox, my + oy); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(a.x - ox, a.y - oy); ctx.lineTo(mx - ox, my - oy); ctx.stroke();
+      }
+
+      function draw() {
+        if (!W || !H) return;
+        var pts = project();
+        ctx.clearRect(0, 0, W, H);
+        var items = [];
+        MOL.bonds.forEach(function (b) {
+          var a = pts[b[0]], c = pts[b[1]], dbl = b.length > 2;
+          items.push({ z: (a.z * 3 + c.z) / 4, draw: function () { stick(a, c, a, dbl); } });
+          items.push({ z: (c.z * 3 + a.z) / 4, draw: function () { stick(c, a, c, dbl); } });
+        });
+        pts.forEach(function (p) { items.push({ z: p.z, draw: function () { sphere(p); } }); });
+        items.sort(function (m, n) { return m.z - n.z; });
+        items.forEach(function (it) { it.draw(); });
+      }
+
+      var last = 0, running = false;
+      function frame(t) {
+        if (!running) return;
+        var dt = last ? Math.min((t - last) / 1000, 0.05) : 0;
+        last = t;
+        if (spinning && !dragging) yaw += dt * 0.35;
+        draw();
+        requestAnimationFrame(frame);
+      }
+      function start() { if (!running) { running = true; last = 0; requestAnimationFrame(frame); } }
+      function stop() { running = false; }
+
+      canvas.addEventListener("pointerdown", function (e) {
+        dragging = true; lastX = e.clientX; lastY = e.clientY;
+        canvas.setPointerCapture(e.pointerId);
+        if (spinning) { spinning = false; spinBtn.textContent = "Spin"; spinBtn.setAttribute("aria-pressed", "false"); }
+      });
+      canvas.addEventListener("pointermove", function (e) {
+        if (!dragging) return;
+        yaw += (e.clientX - lastX) * 0.01;
+        pitch = Math.max(-1.3, Math.min(1.3, pitch + (e.clientY - lastY) * 0.01));
+        lastX = e.clientX; lastY = e.clientY;
+        draw();
+      });
+      ["pointerup", "pointercancel", "pointerleave"].forEach(function (ev) {
+        canvas.addEventListener(ev, function () { dragging = false; });
+      });
+      canvas.addEventListener("wheel", function (e) {
+        e.preventDefault();
+        zoom = Math.max(0.6, Math.min(2.6, zoom * (e.deltaY > 0 ? 0.92 : 1.08)));
+        draw();
+      }, { passive: false });
+      canvas.addEventListener("dblclick", function () { yaw = -0.5; pitch = 0.32; zoom = 1; draw(); });
+
+      spinBtn.addEventListener("click", function () {
+        spinning = !spinning;
+        spinBtn.textContent = spinning ? "Pause" : "Spin";
+        spinBtn.setAttribute("aria-pressed", String(spinning));
+        if (spinning) start();
+      });
+      document.getElementById("mol-reset").addEventListener("click", function () {
+        yaw = -0.5; pitch = 0.32; zoom = 1; draw();
+      });
+      if (!spinning) { spinBtn.textContent = "Spin"; spinBtn.setAttribute("aria-pressed", "false"); }
+
+      readColors();
+      host.classList.add("is-live");
+      resize(); draw(); start();
+
+      window.addEventListener("resize", function () { resize(); draw(); });
+      new MutationObserver(function () { readColors(); draw(); })
+        .observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+      if (window.matchMedia) {
+        var mqd = window.matchMedia("(prefers-color-scheme: dark)");
+        if (mqd.addEventListener) mqd.addEventListener("change", function () { readColors(); draw(); });
+      }
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) { en.isIntersecting ? start() : stop(); });
+        }, { rootMargin: "120px" }).observe(canvas);
+      }
+    })();
+
+
+    // Expandable project details
+    Array.prototype.forEach.call(document.querySelectorAll(".project-toggle"), function (btn) {
+      var card = btn.closest(".project");
+      var body = document.getElementById(btn.getAttribute("aria-controls"));
+      if (!card || !body) return;
+      card.classList.add("is-collapsible");
+      btn.addEventListener("click", function () {
+        var open = card.classList.toggle("is-open");
+        btn.setAttribute("aria-expanded", String(open));
+        btn.querySelector(".project-more-label").textContent = open ? "Close" : "Read more";
+      });
+    });
+
+    // Photo lightbox
+    var dlg = document.getElementById("lightbox");
+    var dlgImg = document.getElementById("lightbox-img");
+    var dlgCap = document.getElementById("lightbox-cap");
+    if (dlg && dlg.showModal) {
+      Array.prototype.forEach.call(document.querySelectorAll(".shot-btn"), function (btn) {
+        btn.addEventListener("click", function () {
+          var img = btn.querySelector("img");
+          dlgImg.src = btn.getAttribute("data-full") || img.src;
+          dlgImg.hidden = false;
+          dlgImg.alt = img.alt;
+          dlgCap.textContent = btn.getAttribute("data-cap") || "";
+          dlg.showModal();
+        });
+      });
+      document.getElementById("lightbox-close").addEventListener("click", function () { dlg.close(); });
+      dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
+    }
+
+    // Highlight the section currently in view
+    var links = Array.prototype.slice.call(document.querySelectorAll(".nav a"));
+    var map = {};
+    links.forEach(function (a) { map[a.getAttribute("href").slice(1)] = a; });
+    var sections = Object.keys(map).map(function (id) { return document.getElementById(id); }).filter(Boolean);
+    if ("IntersectionObserver" in window && sections.length) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          links.forEach(function (a) { a.removeAttribute("aria-current"); });
+          var link = map[entry.target.id];
+          if (link) {
+            link.setAttribute("aria-current", "true");
+            if (link.scrollIntoView && window.innerWidth <= 720) {
+              var nav = link.parentElement;
+              nav.scrollTo({ left: link.offsetLeft - 16, behavior: "smooth" });
+            }
+          }
+        });
+      }, { rootMargin: "-35% 0px -60% 0px" });
+      sections.forEach(function (s) { io.observe(s); });
+    }
+  })();
+</script>
+</body>
+</html>
