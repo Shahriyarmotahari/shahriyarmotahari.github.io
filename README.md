@@ -55,6 +55,8 @@ A gallery fits up to three photos per row and stacks on phones. Clicking a photo
 
 Your current CV lists your phone number, so remove it first if you want it kept off the web.
 
+**Add a certificate:** copy one `<li>` inside `<ul class="certs">` and edit the three lines: name, issuing body, date. Newest first.
+
 **Add a news item:** copy one `<li>` inside `<ul class="news">` and edit the date and text. Newest items go first.
 
 **Add a talk or paper:** copy one `<li class="pub">` block in the Talks section. Your own name is wrapped in `<b>` so it shows in bold.
