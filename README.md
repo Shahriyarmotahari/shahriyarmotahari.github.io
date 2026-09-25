@@ -8,7 +8,8 @@ A single-page academic website with no build step. Everything lives in `index.ht
 | --- | --- |
 | `index.html` | The whole website |
 | `photo.jpg` | Your portrait, shown at the top of the page |
-| `images/` | Photos used in the galleries (talks, projects, and so on) |
+| `images/` | Photos used in the talks, teaching and project galleries |
+| `images/gallery/` | Photos shown in the Gallery section |
 | `favicon.svg` | Browser tab icon (SM monogram) |
 | `.nojekyll` | Tells GitHub Pages to serve the files as-is |
 
@@ -32,7 +33,15 @@ All edits happen in `index.html`. Search for the text you want to change.
 
 **Project details:** each project in the Research section shows a short summary, and the longer text, image and bullet points sit inside a `<div class="project-body">` that opens when the title is clicked. To add a project, copy a whole `<article class="project">` block and give its button's `aria-controls` and the body's `id` a new matching name.
 
-**Add a photo gallery to a section:** put the picture in the `images/` folder (a 4:3 landscape crop, about 1000 px wide, works best), then copy this block into the section:
+**Add a photo to the Gallery section:** this one needs no HTML. Put the picture in `images/gallery/`, then search `index.html` for `GALLERY PHOTOS` and add one line to the list below it:
+
+```js
+["gallery/YOUR-PHOTO.jpg", "The caption that appears under the photo."],
+```
+
+Newest photo at the top; keep the square brackets, quotes and trailing comma. Photos can be portrait or landscape — the gallery fits them together and each one enlarges when clicked. About 1200 px on the long side keeps the page fast.
+
+**Add a photo gallery to another section:** put the picture in the `images/` folder (a 4:3 landscape crop, about 1000 px wide, works best), then copy this block into the section:
 
 ```html
 <div class="gallery">
